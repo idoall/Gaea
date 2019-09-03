@@ -1,7 +1,7 @@
 ROOT:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 GAEA_OUT:=$(ROOT)/bin/gaea
 GAEA_CC_OUT:=$(ROOT)/bin/gaea-cc
-PKG:=$(shell go list -m)
+PKG:=$(shell go list -e)
 
 .PHONY: all build gaea gaea-cc parser clean test build_with_coverage
 all: build test
